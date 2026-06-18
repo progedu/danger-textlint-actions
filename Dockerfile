@@ -1,4 +1,4 @@
-FROM ruby:3.1.2-alpine
+FROM ruby:3.3-alpine
 RUN apk add --update --no-cache bash nodejs git
 RUN gem install danger -v '>= 5.10.3'
 RUN gem install danger-textlint
