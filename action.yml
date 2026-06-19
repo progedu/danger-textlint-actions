@@ -6,3 +6,5 @@ branding:
 runs:
   using: "docker"
   image: "Dockerfile"
+  args:
+    - --no-cache
