@@ -1,7 +1,8 @@
 FROM ruby:3.3-alpine
 RUN apk add --update --no-cache bash nodejs git
-RUN gem install danger -v '>= 5.10.3'
-RUN gem install danger-textlint
+RUN gem install git -v 5.7.1
+RUN gem install danger -v '>= 5.10.3' --conservative
+RUN gem install danger-textlint --conservative
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
